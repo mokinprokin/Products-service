@@ -1,0 +1,21 @@
+
+.about-host{
+    padding: 10px;
+    background-color: rgba(216,136,153, 0.5);
+	background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 21px, transparent 21px) 0% 0%/25px 25px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 21px, transparent 21px) 100% 0%/25px 25px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 21px, transparent 21px) 0% 100%/25px 25px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 21px, transparent 21px) 100% 100%/25px 25px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 8px) calc(100% - 50px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 50px) calc(100% - 8px) no-repeat,
+            linear-gradient(230deg, rgba(142,142,142,0.35) 0%, rgba(175,175,175,0.35) 100%);
+	border-radius: 25px;
+	padding: 12px;
+	box-sizing: border-box;
+	-webkit-box-shadow: 1px 0px 17px 4px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 1px 0px 17px 4px rgba(34, 60, 80, 0.2);
+	box-shadow: 1px 0px 17px 4px rgba(34, 60, 80, 0.2);
+	padding: 20px;
+	overflow-y: scroll;
+
+}

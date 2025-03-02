@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    margin-top: 60px;
+}
+
+.profile-section {
+    background-color: #fff;
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-name, .profile-surname, .profile-username, .profile-email {
+    margin-bottom: 10px;
+}
+
+.profile-name label, .profile-surname label, .profile-username label, .profile-email label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-name input, .profile-surname input, .profile-username input, .profile-email input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.change-password-btn, .create-service-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.change-password-btn:hover, .create-service-btn:hover {
+    background-color: #444;
+}
+.profile-data form{
+    width: 100%;
+}
+.profile-data form div{
+    width: 100%;
+}
+.profile-data .btn {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    background: #4070f4;
+    cursor: pointer;
+}
+
+.profile-data .btn:hover {
+    background: #0e4bf1;
+}
+
+.form-group{
+    height: 100px;
+}
+main .services-title{
+    margin: 20px;
+}

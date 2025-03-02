@@ -1,0 +1,18 @@
+.title{
+    margin: 20px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.chat-btn{
+    padding-top: 5px;
+    margin: 10px;
+}
+.appeals{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}

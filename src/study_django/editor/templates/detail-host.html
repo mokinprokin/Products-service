@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "home.html" %}
+
+    {% load static %}
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'css/home/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail/detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail/about-hoster-widget-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail/about-host-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail/connect-to-hoster-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detail/carousel-style.css' %}">
+    <link rel="stylesheet" href="{% static 'js/carousel.js' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+        {% block nav-menu %} {{block.super}} {% endblock %}
+        <div class="content">
+            <h1>Detail Host</h1>
+            <div class="grid">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Добавить отзыв</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form method="POST">
+                          {% csrf_token %}
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Описание</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="review"></textarea>
+                          </div>
+                          <div class="mb-3">
+                            <label for="rating" class="form-label">Rating</label>
+                            <select class="form-select" id="rating" name="rating">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5" selected>5</option>
+                            </select>
+                          </div>
+                          <button type="submit" class="btn btn-primary" name="rewiew" value="rewiew">Отправить</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-host">
+                  <div id="carouselExampleControls" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url({{first_image}});">
+                      </div>
+                      {% for i in images %}
+                      <div class="carousel-item" style="background-image: url({{i.image.url}});">
+                      </div>
+                      {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="about-hoster">
+                    <div class="hoster-info">                    
+                        <div class="image-hoster">
+                            <img src="{{host.user.image.url}}" alt="">
+                        </div>
+                        <div class="group">
+                            <div class="name-hoster"> {{host.user.user.first_name}} {{host.user.user.last_name}} </div>
+                            <div class="raiting-hoster"> {{middle_rating}} ★</div>
+                        </div>
+                    </div>
+                    <div class="about">{{host.user.description}}</div>
+                </div>
+                <div class="about-host">{{host.description}}</div>
+                <div class="connect-to-hoster">
+                    <p></p>
+                    {% if user.id != host.user.id %}
+                    <form method="post" class="form-connect">
+                        {% csrf_token %}
+                        <button class="connect btn btn-primary" type="submit" name="connect" value="connect">Связаться</button>
+                    </form>
+                    <button class="feedback btn btn-primary" type="submit" name="feedback" data-bs-toggle="modal" data-bs-target="#exampleModal">Отзыв</button>
+                    {% endif %}
+                </div>
+            </div>
+            <h1 class="title">Отзывы</h1>
+            <ol class="gradient-list">
+                {% for i in rewiews %}
+                    <li>{{i.message}} <br>Пользователь: {{i.user.user.username}} <br>Оценка: {{i.rating}} ★</li>
+                {% endfor %}
+              </ol>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    {% endblock %}
+</body>
+</html>

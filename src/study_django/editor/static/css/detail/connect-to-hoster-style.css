@@ -1,0 +1,40 @@
+.connect-to-hoster {
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 6;
+	display: flex;
+	justify-content: center;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	margin: 0;
+}
+
+.connect-to-hoster .form-connect{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: 1/1/2/2;
+	background-color: rgba(121,41,177, 0.5);
+}
+.connect-to-hoster .form-connect{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: 1/1/2/2;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.connect-to-hoster .form-connect .connect{
+	width: 100%;
+	height: 100%;
+}
+.connect-to-hoster .feedback{
+	grid-area: 1/2/2/3;
+	margin-right: 10px;
+	margin-left: 10px;
+}
