@@ -1,46 +1,46 @@
 # 🏠 RentHub 
 
-**Простой аналог Avito с удобными чатами и системой отзывов**
+**Simple analog of Avito with convenient chat rooms and feedback system**
 
 ![Project Banner](https://via.placeholder.com/800x300?text=RentHub+Marketplace)
 
 ---
 
-## ✨ Особенности проекта
+## ✨ Project Features
 
-| 🛡️ Безопасность         | 💬 Общение               | 📊 Аналитика            |
+| 🛡️ Security | 💬 Communication | 📊 Analytics |
 |------------------------|-------------------------|------------------------|
-| Регистрация и вход     | Чат между пользователями | Рейтинги и отзывы      |
-| Личный кабинет         | Быстрые сообщения        | История сделок         |
+| Registration and login | User-to-User chat | Ratings and reviews |
+| Personal Profile | Quick Messages | Transaction History |
 
 ---
 
-## 🚀 Функционал
+## 🚀 Functionality
 
-### 🔐 Аутентификация и профиль
-- 📝 Регистрация / вход через email
-- 🖼️ Загрузка аватарки
-- ✏️ Редактирование профиля
-- 📍 Контактные данные
+### 🔐 Authentication and Profile
+- 📝 Register / login via email
+- 🖼️ Upload avatar
+- ✏️ Edit profile
+- 📍 Contact info
 
-### 🏡 Система объявлений
-- Создание и редактирование объявлений
-- Загрузка нескольких фотографий
-- Указание цены и скидки
-- Детальное описание товаров
+### 🏡 Announcement System
+- Create and edit ads
+- Upload multiple photos
+- Specifying price and discount
+- Detailed description of products
 
-### 💬 Встроенный мессенджер
-- 🔔 Уведомления о новых сообщениях
-- 📅 История переписки
+### 💬 Built-in messenger
+- 🔔 Notifications of new messages
+- 📅 Correspondence history
 
-### ⭐ Система отзывов
-- Оценка качества сделки
-- Текстовые отзывы
-- Средний рейтинг пользователя
+### ⭐ Feedback system
+- Transaction Quality Score
+- Text feedback
+- Average user rating
 
 ---
 
-## 🛠 Технологии
+## 🛠 Technology
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
 ![Django](https://img.shields.io/badge/Django-4.0-green?logo=django)
@@ -49,21 +49,15 @@
 
 ---
 
-## ⚙️ Установка
+## ⚙️ Installation
 
 ```bash
-# 1. Клонировать репозиторий
+# 1. Clone the repository
 git clone https://github.com/yourusername/RentHub.git
 cd RentHub
 
-# 2. Установить зависимости
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Применить миграции
+# 3. Apply migrations
 python manage.py migrate
-
-# 4. Создать админа
-python manage.py createsuperuser
-
-# 5. Запустить сервер
-python manage.py runserver
